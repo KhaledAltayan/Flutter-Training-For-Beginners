@@ -1,22 +1,15 @@
 import 'package:material_ui/material_ui.dart';
 
+import 'dice_roller_project/gradient_page.dart';
+
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomRight,
-              colors: [Colors.blue, Colors.purple],
-            ),
-          ),
-
-          child: Center(child: Text('Hello World')),
-        ),
+        body: GradientPage(color1: Colors.blue, color2: Colors.purple),
       ),
     ),
   );
 }
+
