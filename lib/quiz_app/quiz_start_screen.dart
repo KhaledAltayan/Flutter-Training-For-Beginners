@@ -1,7 +1,9 @@
 import 'package:material_ui/material_ui.dart';
 
-class QuizStartPage extends StatelessWidget {
-  const QuizStartPage({super.key});
+class QuizStartScreen extends StatelessWidget {
+  const QuizStartScreen(this.onStartQuiz,{super.key});
+
+  final void Function() onStartQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class QuizStartPage extends StatelessWidget {
           ),
           SizedBox(height: 80),
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: onStartQuiz,
             style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
             icon: Icon(Icons.play_arrow),
             label: Text('Start'),
